@@ -120,7 +120,7 @@ public class ObjectAdapter {
         }
 
         if (objectNameCache.indexOf(modelName) < 0) {
-            throw new OdooApiException("Could not find model with name '" + modelName + "'");
+//             throw new OdooApiException("Could not find model with name '" + modelName + "'");
         }
     }
 
