@@ -770,11 +770,11 @@ public class ObjectAdapter {
 		case FLOAT:
 			result = Double.valueOf(value.toString());
 			break;
+		case ONE2MANY:
 		case MANY2MANY:
 			result = formatManyToManyForWrite(value);
 			break;
 		case MANY2ONE:
-		case ONE2MANY:
 		case INTEGER:
 			result = formatIntegerForWrite(value);
 			break;
