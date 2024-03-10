@@ -5,17 +5,34 @@
 
     <groupId>com.odoojava</groupId>
     <artifactId>odoo-java-api</artifactId>
-    <version>3.3.3</version>
+    <version>3.3.4</version>
     <packaging>jar</packaging>
 
     <name>odoo-java-api</name>
-    <url>http://maven.apache.org</url>
+    <url>https://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>alibaba</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alibaba</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
@@ -59,7 +76,7 @@
     </dependencies>
     <organization>
         <name>odoo-java</name>
-        <url>http://odoo-java.com</url>
+        <url>https://odoo-java.com</url>
     </organization>
     <scm>
         <url>https://github.com/odoo-java/odoo-java-api</url>
