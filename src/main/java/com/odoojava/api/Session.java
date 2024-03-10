@@ -13,7 +13,7 @@
  *   distributed under the License is distributed on an "AS IS" BASIS,
  *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *   See the License for the specific language governing permissions and
- *   limitations under the License. 
+ *   limitations under the License.
  *
  */
 package com.odoojava.api;
@@ -182,14 +182,14 @@ public class Session {
 
 	private void checkVersionCompatibility() throws XmlRpcException, OdooApiException {
 
-		if (this.getServerVersion().getMajor() < 8 || this.getServerVersion().getMajor() > 16) {
+		if (this.getServerVersion().getMajor() < 8 || this.getServerVersion().getMajor() > 17) {
 			throw new OdooApiException("Only Odoo Version from v8.x to 16.x are maintained. "
 					+ "Please choose another version of the library");
 		}
 	}
 
 	/**
-	 * 
+	 *
 	 * @param reportName
 	 * @return reportAdapter initialized with
 	 * @throws OdooApiException
@@ -232,7 +232,7 @@ public class Session {
 		} catch (Throwable e) {
 			System.out.println("General exception");
 			e.printStackTrace();
-		} 
+		}
 
 		if (id instanceof Integer) {
 			userID = (Integer) id;
@@ -262,7 +262,7 @@ public class Session {
 		int result = jsonclient.invoke("call", jsonparams, int.class);
 
 		return (int) result;
-	
+
 	}
 
 	public Object[] call_report_jsonrpc(String reportModel, String reportMethod, ArrayList<Object> args)
@@ -492,8 +492,8 @@ public class Session {
 		}
 		return serverVersion;
 	}
-	public void setServerVersion(Version version) {
-		this.version = version;
+	public void setServerVersion(Version serverVersion) {
+		this.serverVersion = serverVersion;
 	}
 
 	public byte[] executeReportService(String reportName, String reportMethod, Object[] ids) throws XmlRpcException {
@@ -519,7 +519,7 @@ public class Session {
 
 	/**
 	 * Returns the current logged in User's UserID
-	 * 
+	 *
 	 * @return
 	 */
 	public int getUserID() {
