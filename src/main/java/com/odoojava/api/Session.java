@@ -492,6 +492,9 @@ public class Session {
 		}
 		return serverVersion;
 	}
+	public void setServerVersion(Version version) {
+		this.version = version;
+	}
 
 	public byte[] executeReportService(String reportName, String reportMethod, Object[] ids) throws XmlRpcException {
 		byte[] finalResults;
