@@ -794,7 +794,7 @@ public class ObjectAdapter {
 	private Object formatManyToManyForWrite(Object value) {
 		// For write, otherwise it is a comma separated list of strings used
 		// by import
-		if (value instanceof Object[]) {
+		if (value instanceof Object[] && false) {
 			Object[] tmp = new Object[] { 6, 0, (Object[]) value };
 			return new Object[][] { tmp };
 		} else {
